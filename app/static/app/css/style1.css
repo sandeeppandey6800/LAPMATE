@@ -1,0 +1,204 @@
+body {
+    background-color: #1e1e1f;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.head {
+    color: #ffdb70;
+    text-align: center;
+}
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#hero::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+#hero video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+    font-family: 'object-fit: cover';
+}
+
+#hero .caption {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    color: #ffffff;
+}
+
+#hero .caption h1 {
+    font-size: 2em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+#hero .caption h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width:768px) {
+    #hero .caption h1 {
+        font-size: 2.5rem;
+    }
+    #hero .caption h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #hero .caption h1 {
+        font-size: 3rem;
+    }
+    #hero .caption h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #hero .caption h1 {
+        font-size: 4rem;
+    }
+    #hero .caption h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.hero-vid {
+    filter: brightness(40%);
+}
+
+.hero-vid:hover {
+    filter: brightness(40%);
+    filter: blur(50%);
+}
+
+.explore-button {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.explore-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.explore-button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.explore-button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.explore-button:hover svg {
+    transform: translateX(0);
+}
+
+.explore-button:active {
+    transform: scale(0.95);
+}
+
+#navbar-brand {
+    font-weight: bolder;
+    color: #ffdb70;
+    text-transform: uppercase;
+    text-overflow: inherit;
+}
+
+.login-text {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffdb70;
+}
+
+#login-button {
+    background-color: #ffdb70;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+a:hover {
+    color: #ffdb70;
+}
+
+#light-container {
+    background-color: #2e2e2f;
+    border-radius: 2em;
+}
+
+#laptop-grid {
+    color: white;
+    background-color: #2e2e2f;
+    height: max-content;
+    border-radius: 0.5em;
+    border: 0.25px solid white;
+}
+
+#q {
+    color: white;
+    font-weight: 100;
+}
+
+#prc {
+    color: white;
+}

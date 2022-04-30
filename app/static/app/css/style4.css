@@ -1,0 +1,56 @@
+small{
+    color: white;
+}
+.desc{
+    font-weight: bold;
+}
+.price-sub{
+    font-weight: bolder;
+    background-color: #000000;
+    padding: 0.5em;
+    border-radius: 1em;
+    animation: text-align 0.5s;
+}
+.img-fluid{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 2em;
+    border-radius: 1em;
+}
+#sub-btn{
+    letter-spacing: 2px;
+}
+#pr-btn{
+    background-color: #ffdb70;
+    color: #000000;
+    border:none;
+    font-weight: bold;
+}
+.dropdown-menu{
+    background-color: black;
+    border-radius: 0.75em;
+   
+}
+.dropdown-item{
+    color:white;
+    width: 90%;
+    text-align: end;
+    border-radius: 0.25em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#ck{
+    background-color:#000000 ;
+    border: none;
+    border-radius:1em;
+    border:0.5px solid #ffffff;
+}
+.footer{
+    position:fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: #000000;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 1em;
+    height:max-content;
+}

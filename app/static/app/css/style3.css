@@ -1,0 +1,18 @@
+#laptop-grid{
+    background:none;
+    border: none;
+    font-weight:bold;
+    letter-spacing: 0.05em;
+
+}
+.fw-bold{
+    color:white;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3.5em;
+    font-weight: bolder;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ffdb70;
+}

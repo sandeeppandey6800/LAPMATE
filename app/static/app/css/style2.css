@@ -1,0 +1,17 @@
+
+#laptop-grid{
+    background:none;
+    border: none;
+    font-weight:bold;
+    letter-spacing: 0.05em;
+
+}
+.fs-5{
+    color:white;
+    font-weight: bold;
+    background-color:#92949c ;
+    padding: 0.5em;
+    border-radius: 1.25em;
+    border-top: 1em;
+    font-size: smaller;
+}
