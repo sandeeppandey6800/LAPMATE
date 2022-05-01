@@ -3,117 +3,161 @@
 {% block title %}Payment Page{% endblock title %}
 {% block main-content %}
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif
-} 
-
-body {
-    
-    min-height: 100vh;
-   
-    
-}
-
-.card {
-    max-width: 500px;
-    margin: auto;
-    color: black;
-    border-radius: 20 px
-}
-
-p {
-    margin: 0px
-}
-
-.container .h8 {
-    font-size: 30px;
-    font-weight: 800;
-    text-align: center
-}
-
-.btn.btn-primary {
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
-    border: none;
-    transition: 0.5s;
-    background-size: 200% auto
-}
-
-.btn.btn.btn-primary:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none
-}
-
-.btn.btn-primary:hover .fas.fa-arrow-right {
-    transform: translate(15px);
-    transition: transform 0.2s ease-in
-}
-
-.form-control {
-    color: white;
-    background-color: #223C60;
-    border: 2px solid transparent;
-    height: 60px;
-    padding-left: 20px;
-    vertical-align: middle
-}
-
-.form-control:focus {
-    color: white;
-    background-color: #0C4160;
-    border: 2px solid #2d4dda;
-    box-shadow: none
-}
-
-.text {
-    font-size: 14px;
-    font-weight: 600
-}
-
-::placeholder {
-    font-size: 14px;
-    font-weight: 600
-}
+    .row1{
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        margin: 0 -16px;
+        margin-top: 1em;
+      }
+      
+      .col-25 {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+      }
+      
+      .col-50 {
+        -ms-flex: 50%; /* IE10 */
+        flex: 50%;
+      }
+      
+      .col-75 {
+        -ms-flex: 75%; /* IE10 */
+        flex: 75%;
+      }
+      
+      .col-25,
+      .col-50,
+      .col-75 {
+        padding: 0 16px;
+      }
+      
+      .container {
+        
+        padding: 5px 20px 15px 20px;
+        
+        border-radius: 3px;
+      }
+      
+      input[type=text] {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      
+      label {
+        margin-bottom: 10px;
+        display: block;
+      }
+      
+      .icon-container {
+        margin-bottom: 20px;
+        padding: 7px 0;
+        font-size: 24px;
+      }
+      
+      .btn {
+        background-color: #ffdb70;
+        color: #000000;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        width: 100%;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 17px;
+      }
+      
+      .btn:hover {
+        background-color: #000000;
+        color:#ffffff;
+      }
+      
+      span.price {
+        float: right;
+        color: grey;
+      }
+      
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+      @media (max-width: 800px) {
+        .row {
+          flex-direction: column-reverse;
+        }
+        .col-25 {
+          margin-bottom: 20px;
+        }
+      }
 </style>
-<div class="container p-0">
-    <div class="card px-4">
-        <p class="h8 py-3">Payment Details</p>
-        <div class="row gx-3">
-            <div class="col-12">
-                <div class="d-flex flex-column">
-                    <p class="text mb-1">Person Name</p> <input class="form-control mb-3" type="text" placeholder="Name" value="Barry Allen">
+<div class="row1">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+  
+          <div class="row1">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" >
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" >
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" >
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" >
+  
+              <div class="row1">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" >
                 </div>
-            </div>
-            <div class="col-12">
-                <div class="d-flex flex-column">
-                    <p class="text mb-1">Card Number</p> <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" >
                 </div>
+              </div>
             </div>
-            <div class="col-6">
-                <div class="d-flex flex-column">
-                    <p class="text mb-1">Expiry</p> <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" >
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" >
+  
+              <div class="row1">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" >
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="d-flex flex-column">
-                    <p class="text mb-1">CVV/CVC</p> <input class="form-control mb-3 pt-2 " type="password" placeholder="***">
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv">
                 </div>
+              </div>
             </div>
-            <div class="col-12">
-                <a href="/"><div class="btn btn-primary mb-3"> <span class="ps-3">Pay </span> <span class="fas fa-arrow-right"></span> </div></a>
-            </div>
-        </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
     </div>
-</div>
+  
+    
+  </div>
 {% endblock main-content %}
