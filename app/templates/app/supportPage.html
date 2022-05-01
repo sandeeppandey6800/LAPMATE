@@ -2,7 +2,168 @@
 {% load static %}
 {% block title %}Support{% endblock title %}
 {% block main-content %}
-<p>This is a support page</p>
-<a href="mailto:arshsinghbst@gmail.com">Send email</a><br>
-<a href="tel:+4733378901">+47 333 78 901</a>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+ 
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.container .card
+{
+   width: 330px;
+   height: 416px;
+   padding: 60px 30px;
+   margin: 20px;
+   background: #0f0f0f;
+   border-radius: 20px;
+}
+.container .card .content
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container .card .content .imgBx
+{
+   width: 180px;
+   height: 180px;
+   border-radius: 50%;
+   position: relative;
+   margin-bottom: 20px;
+   overflow: hidden;
+}
+.container .card .content .imgBx img
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.container .card .content .contentBx h4
+{
+   color: #36187d;
+   font-size: 1.7rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.container .card .content .contentBx h5
+{
+   color: #6c758f;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+}
+.container .card .content .sci
+{
+   margin-top: 20px;
+}
+.container .card .content .sci a
+{
+   text-decoration: none;
+   color: #6c758f;
+   font-size: 30px;
+   margin: 10px;
+   transition: color 0.4s;
+}
+.container .card .content .sci a:hover
+{
+   color: #0196e3;
+}
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="{% static 'app/images/arsh.jpg' %}" alt="">
+            </div>
+            <div class="contentBx">
+                <h4>Arsh</h4>
+                <h5>Resources collection and project documentation</h5>
+            </div>
+            <div class="sci">
+                <a href="#"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="{% static 'app/images/Shubham.jpg' %}" alt="">
+            </div>
+            <div class="contentBx">
+                <h4>Shubham</h4>
+                <h5>Backend Developer</h5>
+            </div>
+            <div class="sci">
+                <a href="#"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="{% static 'app/images/sndp.jpg' %}" alt="">
+            </div>
+            <div class="contentBx">
+                <h4>Sandeep</h4>
+                <h5> Ux Designer</h5>
+            </div>
+            <div class="sci">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="{% static 'app/images/nissh.jpg' %}" alt="">
+            </div>
+            <div class="contentBx">
+                <h4>Nishant</h4>
+                <h5>Ui Developer</h5>
+            </div>
+            <div class="sci">
+                <a href="#"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img src="{% static 'app/images/sawrabh.jpg' %}" alt="">
+            </div>
+            <div class="contentBx">
+                <h4>Sowrabh</h4>
+                <h5>Layout Designer</h5>
+            </div>
+            <div class="sci">
+                <a href="#"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock main-content %}
